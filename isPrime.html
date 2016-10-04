@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Is Prime ?</title>
+    <script>
+    var input = prompt("Enter a number to check if it is prime");
+    if (isNaN(input)){
+      prompt("Enter a number to check if it is prime")
+    }
+
+function isPrime (input){
+     input = parseInt(input);
+     document.write(input);
+    var flag = true; //a prime
+
+    if (input <= 1){
+      flag = false;
+      console.log("false");
+    }else if (input == 2){
+      flag = true;
+      console.log("true");
+    }else{
+      for (var i = 2; i < input; i++){
+        if (input%i == 0){
+          flag = false
+        }
+      }
+    }
+
+    return flag.toString();
+  }
+
+  alert(isPrime(input));
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
